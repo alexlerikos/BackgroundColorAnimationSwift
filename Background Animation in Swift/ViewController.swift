@@ -11,9 +11,8 @@ import ChameleonFramework
 
 class ViewController: UIViewController,BackgroundColorAnimationDelegate {
 	
-	// MARK: Properties
+	// MARK: Properties- requiered properties for background animation
 	var backgroundColorAnimation:BackgroundColorAnimation?
-//	var backgroundColorIndex = 0
 	let backgroundColors = [FlatRed(),
 													FlatOrange(),
 													FlatPink(),
@@ -26,6 +25,8 @@ class ViewController: UIViewController,BackgroundColorAnimationDelegate {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		
+		// Set up backgroundanimation properties here
 		self.backgroundColorAnimation = BackgroundColorAnimation(backgroundColors: backgroundColors, delay: 0.0, duration: 2.5)
 		self.view.backgroundColor = backgroundColors[0]
 		self.doBackgroundColorAnimation()
