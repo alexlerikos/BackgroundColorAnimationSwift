@@ -9,23 +9,25 @@
 import UIKit
 import ChameleonFramework
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,BackgroundColorAnimationDelegate {
 	
 	// MARK: Properties
-	var backgroundColorIndex = 0
-	let backgroundColors:Array = [FlatRed,
-																FlatOrange,
-																FlatPink,
-																FlatPurple,
-																FlatYellow,
-																FlatGreen,
-																FlatBlue]
+	var backgroundColorAnimation:BackgroundColorAnimation?
+//	var backgroundColorIndex = 0
+	let backgroundColors = [FlatRed(),
+													FlatOrange(),
+													FlatPink(),
+													FlatPurple(),
+													FlatYellow(),
+													FlatGreen(),
+													FlatBlue()]
 
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		self.view.backgroundColor = backgroundColors[0]()
+		self.backgroundColorAnimation = BackgroundColorAnimation(backgroundColors: backgroundColors, delay: 0.0, duration: 2.5)
+		self.view.backgroundColor = backgroundColors[0]
 		self.doBackgroundColorAnimation()
 		
 		
@@ -40,19 +42,20 @@ class ViewController: UIViewController {
 
 	func doBackgroundColorAnimation() {
 		
-		
-		if (self.backgroundColorIndex >= self.backgroundColors.count){
-			self.backgroundColorIndex = 0
+		if (self.backgroundColorAnimation!.backgroundColorIndex >= self.backgroundColors.count){
+			 self.backgroundColorAnimation!.backgroundColorIndex = 0
 		}
-		UIView.animateWithDuration(2.5,
-															delay: 0.0,
+		
+		
+		UIView.animateWithDuration(self.backgroundColorAnimation!.duration,
+															delay: self.backgroundColorAnimation!.delay,
 															options: UIViewAnimationOptions.AllowUserInteraction,
 															animations: {() in
-																	self.view.backgroundColor = self.backgroundColors[self.backgroundColorIndex]()
-																	print("Animation i: ", self.backgroundColorIndex)
+																	self.view.backgroundColor = self.backgroundColors[self.backgroundColorAnimation!.backgroundColorIndex]
+																	print("Animation i: ", self.backgroundColorAnimation!.backgroundColorIndex)
 															},
 															completion: {(value: Bool) in
-																	++self.backgroundColorIndex
+																	++self.backgroundColorAnimation!.backgroundColorIndex
 																	self.doBackgroundColorAnimation()
 															})
 	}

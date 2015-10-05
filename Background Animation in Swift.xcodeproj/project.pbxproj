@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C50D29BA1BC22F9000A5F857 /* BackgroundColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50D29B91BC22F9000A5F857 /* BackgroundColorAnimation.swift */; settings = {ASSET_TAGS = (); }; };
 		C59F4C3E1BC1C1E300960003 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59F4C3D1BC1C1E300960003 /* AppDelegate.swift */; };
 		C59F4C401BC1C1E300960003 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59F4C3F1BC1C1E300960003 /* ViewController.swift */; };
 		C59F4C431BC1C1E300960003 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C59F4C411BC1C1E300960003 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		668BEE75EF71013696A375A3 /* Pods-Background Animation in Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Background Animation in Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Background Animation in Swift/Pods-Background Animation in Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		95C1051787F4FBAB7452985D /* Pods_Background_Animation_in_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Background_Animation_in_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E9FE6D85CC6D56352CFC6F /* Pods-Background Animation in Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Background Animation in Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-Background Animation in Swift/Pods-Background Animation in Swift.release.xcconfig"; sourceTree = "<group>"; };
+		C50D29B91BC22F9000A5F857 /* BackgroundColorAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundColorAnimation.swift; sourceTree = "<group>"; };
 		C59F4C3A1BC1C1E300960003 /* Background Animation in Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Background Animation in Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59F4C3D1BC1C1E300960003 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C59F4C3F1BC1C1E300960003 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				C59F4C3D1BC1C1E300960003 /* AppDelegate.swift */,
 				C59F4C3F1BC1C1E300960003 /* ViewController.swift */,
+				C50D29B91BC22F9000A5F857 /* BackgroundColorAnimation.swift */,
 				C59F4C411BC1C1E300960003 /* Main.storyboard */,
 				C59F4C441BC1C1E300960003 /* Assets.xcassets */,
 				C59F4C461BC1C1E300960003 /* LaunchScreen.storyboard */,
@@ -273,6 +276,7 @@
 			files = (
 				C59F4C401BC1C1E300960003 /* ViewController.swift in Sources */,
 				C59F4C3E1BC1C1E300960003 /* AppDelegate.swift in Sources */,
+				C50D29BA1BC22F9000A5F857 /* BackgroundColorAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
